@@ -610,22 +610,37 @@ a {
   margin-top: 30px;
 }
 
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.contact-buttons a {
-  padding: 11px 16px;
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 999px;
   font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
 
+.contact-link:hover {
+  background: var(--green-soft);
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  flex-shrink: 0;
+  color: var(--green-dark);
+}
 /* === FAQ === */
 .faq-list {
   display: grid;
@@ -1257,6 +1272,7 @@ footer {
   .form-note {
     font-size: .78rem;
   }
+   
 
   /* --- CONTACT BUTTONS --- */
   .contact-buttons {
