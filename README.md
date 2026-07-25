@@ -1,0 +1,1 @@
+Open index.html with Live Server. Add your photo as images/profile.jpg. Thai copy should be checked by a native speaker before launch.
