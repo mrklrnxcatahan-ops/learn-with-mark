@@ -774,3 +774,437 @@ margin:0;
     padding: 54px 0 !important;
   }
 }
+
+/* =====================================================
+   FINAL MOBILE DESIGN
+   Paste at the absolute bottom of style.css
+===================================================== */
+
+@media screen and (max-width: 1100px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: calc(100% - 32px) !important;
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* =====================
+     HEADER
+  ===================== */
+
+  .nav-wrap {
+    min-height: 72px !important;
+    position: relative !important;
+  }
+
+  .brand-icon {
+    width: 48px !important;
+    height: 48px !important;
+    transform: none !important;
+  }
+
+  .brand-wordmark {
+    width: 112px !important;
+    height: auto !important;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    margin-left: auto !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 1.6rem !important;
+    cursor: pointer !important;
+  }
+
+  .nav-links {
+    display: none !important;
+    position: absolute !important;
+    top: 72px !important;
+    left: -16px !important;
+    right: -16px !important;
+    width: auto !important;
+    padding: 18px !important;
+    background: #ffffff !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 18px 40px rgba(33, 71, 52, 0.14) !important;
+    z-index: 9999 !important;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    width: 100% !important;
+    padding: 12px !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+  }
+
+  .nav-links a:hover {
+    background: var(--green-soft) !important;
+  }
+
+  .nav-cta {
+    margin-top: 5px !important;
+  }
+
+  .language-switch {
+    align-self: center !important;
+    margin-top: 7px !important;
+  }
+
+  /* =====================
+     HERO
+  ===================== */
+
+  .hero {
+    padding: 50px 0 58px !important;
+  }
+
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  .hero-copy {
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 10vw, 4.2rem) !important;
+    line-height: 1.03 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-copy > p {
+    max-width: 620px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .hero-trust {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 9px 18px !important;
+  }
+
+  .hero-visual {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: auto !important;
+    transform: none !important;
+  }
+
+  .photo-placeholder {
+    min-height: 340px !important;
+    height: 340px !important;
+  }
+
+  .profile-photo {
+    width: 100% !important;
+    height: 340px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  /* =====================
+     GENERAL SECTIONS
+  ===================== */
+
+  .section {
+    padding: 65px 0 !important;
+  }
+
+  .section-heading {
+    max-width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+
+  .section h2 {
+    font-size: clamp(2rem, 7vw, 3.2rem) !important;
+  }
+
+  .two-col,
+  .availability-grid,
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  /* =====================
+     2 × 2 CARD LAYOUT
+  ===================== */
+
+  .cards.four,
+  .steps,
+  .three-steps,
+  .portfolio-grid,
+  .achievement-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .service-card,
+  .step,
+  .portfolio-grid article,
+  .achievement-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 21px !important;
+  }
+
+  .service-card h3,
+  .step h3,
+  .portfolio-grid h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .service-card p,
+  .step p,
+  .portfolio-grid p {
+    font-size: 0.92rem !important;
+  }
+
+  /* HOW IT WORKS */
+
+  .steps .step,
+  .three-steps .step {
+    border: 1px solid var(--border) !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(33, 71, 52, 0.06) !important;
+  }
+
+  .step > span,
+  .step-number {
+    margin-bottom: 14px !important;
+  }
+
+  /* =====================
+     SCHEDULE
+  ===================== */
+
+  .schedule-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+
+  /* =====================
+     FORM
+  ===================== */
+
+  .lesson-form,
+  .inquiry-form {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .form-grid,
+  .two-columns {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .checkbox-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100% !important;
+    font-size: 16px !important;
+  }
+
+  /* =====================
+     FOOTER
+  ===================== */
+
+  .footer-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 13px !important;
+    padding: 22px 0 !important;
+  }
+
+  .footer-brand {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 7px !important;
+  }
+
+  .footer-logo {
+    width: 210px !important;
+    height: 90px !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  .footer-wrap > p {
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  .floating-card {
+    display: none !important;
+  }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 24px) !important;
+  }
+
+  .brand-icon {
+    width: 43px !important;
+    height: 43px !important;
+  }
+
+  .brand-wordmark {
+    width: 100px !important;
+  }
+
+  .hero {
+    padding: 42px 0 50px !important;
+  }
+
+  .hero h1 {
+    font-size: 2.55rem !important;
+  }
+
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+  }
+
+  .hero-actions .btn {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .hero-trust {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  .photo-placeholder,
+  .profile-photo {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  .section {
+    padding: 55px 0 !important;
+  }
+
+  /*
+    Keep four-item sections as 2 × 2
+    instead of four squeezed columns.
+  */
+
+  .cards.four,
+  .steps,
+  .three-steps,
+  .portfolio-grid,
+  .achievement-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .service-card,
+  .step,
+  .portfolio-grid article,
+  .achievement-card {
+    padding: 17px !important;
+    border-radius: 18px !important;
+  }
+
+  .service-card h3,
+  .step h3,
+  .portfolio-grid h3 {
+    font-size: 0.98rem !important;
+  }
+
+  .service-card p,
+  .step p,
+  .portfolio-grid p {
+    font-size: 0.85rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .icon {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 13px !important;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media screen and (max-width: 390px) {
+
+  .hero-actions {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cards.four,
+  .steps,
+  .three-steps,
+  .portfolio-grid,
+  .achievement-strip {
+    grid-template-columns: 1fr !important;
+  }
+}
