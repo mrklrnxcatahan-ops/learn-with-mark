@@ -72,10 +72,11 @@ a {
 
 .brand-icon {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  transform: scale(3);
+  transform: none;
+  flex-shrink: 0;
 }
 
 .brand-wordmark {
@@ -943,9 +944,9 @@ footer {
   }
 
   /* --- BRAND (phone) --- */
-.brand-icon {
-    width: 350px;
-    height: 350px;
+  .brand-icon {
+    width: 55px;
+    height: 55px;
     transform: none;
     object-fit: contain;
   }
