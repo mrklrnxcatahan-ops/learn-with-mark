@@ -36,15 +36,9 @@
 </head>
 
 <body>
-  <header class="site-header">
-
+<header class="site-header">
   <div class="container nav-wrap">
-
-    <a
-      class="brand"
-      href="#home"
-      aria-label="Learn with Mark home"
-    >
+    <a class="brand" href="#home" aria-label="Learn with Mark home">
       <img
         src="images/branding/ICON.png"
         class="brand-icon"
@@ -58,115 +52,46 @@
       >
     </a>
 
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
 
-    <nav
-      class="nav-links"
-      id="mobileNavigation"
-      aria-label="Main navigation"
-    >
+    <nav class="nav-links">
+      <a href="#about" data-en="About" data-th="เกี่ยวกับ">About</a>
 
-      <div class="mobile-menu-header">
-
-        <span>Menu</span>
-
-        <button
-          class="menu-close"
-          type="button"
-          aria-label="Close navigation menu"
-        >
-          ×
-        </button>
-
-      </div>
-
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#learners">
-        For Learners
-      </a>
-
-      <a href="#lessons">
+      <a href="#lessons" data-en="Lessons" data-th="บทเรียน">
         Lessons
       </a>
 
-      <a href="#process">
-        How It Works
-      </a>
-
-      <a href="#experience">
+      <a href="#work" data-en="Experience" data-th="ประสบการณ์">
         Experience
       </a>
 
-      <a href="#availability">
+      <a href="#availability" data-en="Availability" data-th="ช่วงเวลาเรียน">
         Availability
-      </a>
-
-      <a href="#faq">
-        FAQ
       </a>
 
       <a
         class="nav-cta"
         href="#contact"
+        data-en="Start an Inquiry"
+        data-th="สอบถามการเรียน"
       >
         Start an Inquiry
       </a>
 
-    </nav>
-
-
-    <div class="header-actions">
-
-      <div
-        class="language-switch"
-        aria-label="Website language"
-      >
-
-        <button
-          class="lang-btn active"
-          type="button"
-          data-lang="en"
-        >
+      <div class="language-switch">
+        <button class="lang-btn active" data-lang="en">
           EN
         </button>
 
-        <button
-          class="lang-btn"
-          type="button"
-          data-lang="th"
-        >
+        <button class="lang-btn" data-lang="th">
           ไทย
         </button>
-
       </div>
-
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mobileNavigation"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
+    </nav>
 
   </div>
-
-
-  <button
-    class="nav-overlay"
-    type="button"
-    aria-label="Close navigation menu"
-  ></button>
-
 </header>
 
   <main>
