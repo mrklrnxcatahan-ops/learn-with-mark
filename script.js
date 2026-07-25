@@ -29,50 +29,52 @@ function closeNav() {
   document.body.style.overflow = "";
 }
 
-toggle.addEventListener("click", () => {
+toggle.addEventListener("click", function () {
   nav.classList.contains("open") ? closeNav() : openNav();
 });
 
-document.querySelectorAll(".nav-links a").forEach(a =>
-  a.addEventListener("click", closeNav)
-);
+document.querySelectorAll(".nav-links a").forEach(function (a) {
+  a.addEventListener("click", closeNav);
+});
 
 navOverlay.addEventListener("click", closeNav);
 
-document.addEventListener("keydown", e => {
+document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && nav.classList.contains("open")) closeNav();
 });
 
 /* --- Language Switch --- */
-let currentLanguage = localStorage.getItem("preferredLanguage") || "en";
-const langButtons = document.querySelectorAll(".lang-btn");
+var currentLanguage = localStorage.getItem("preferredLanguage") || "en";
+var langButtons = document.querySelectorAll(".lang-btn");
 
 function updateLanguage(lang) {
   currentLanguage = lang;
   document.documentElement.lang = lang;
   localStorage.setItem("preferredLanguage", lang);
-  document.querySelectorAll("[data-en][data-th]").forEach(el => {
-    const text = el.dataset[lang];
+  document.querySelectorAll("[data-en][data-th]").forEach(function (el) {
+    var text = el.dataset[lang];
     if (text) el.textContent = text;
   });
-  langButtons.forEach(btn =>
-    btn.classList.toggle("active", btn.dataset.lang === lang)
-  );
+  langButtons.forEach(function (btn) {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
 }
 
-langButtons.forEach(btn =>
-  btn.addEventListener("click", () => updateLanguage(btn.dataset.lang))
-);
+langButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    updateLanguage(btn.dataset.lang);
+  });
+});
 
 /* --- Rotating Word --- */
-const rotatingWord = document.getElementById("rotatingWord");
-const words = {
+var rotatingWord = document.getElementById("rotatingWord");
+var words = {
   en: ["real life.", "university.", "your career.", "more confidence."],
   th: ["ชีวิตจริง", "มหาวิทยาลัย", "การทำงาน", "ความมั่นใจ"]
 };
-let wordIndex = 0;
+var wordIndex = 0;
 
-setInterval(() => {
+setInterval(function () {
   if (!rotatingWord) return;
   wordIndex = (wordIndex + 1) % words[currentLanguage].length;
   rotatingWord.animate(
@@ -86,8 +88,8 @@ setInterval(() => {
 }, 2500);
 
 /* --- Scroll Reveal --- */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
@@ -95,34 +97,36 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+document.querySelectorAll(".reveal").forEach(function (el) {
+  observer.observe(el);
+});
 
 /* --- Tilt Card (desktop only) --- */
-const tiltCard = document.querySelector(".tilt-card");
+var tiltCard = document.querySelector(".tilt-card");
 if (tiltCard && matchMedia("(pointer:fine)").matches) {
-  tiltCard.addEventListener("mousemove", e => {
-    const rect = tiltCard.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    tiltCard.style.transform = `perspective(900px) rotateX(${-8 * y}deg) rotateY(${8 * x}deg)`;
+  tiltCard.addEventListener("mousemove", function (e) {
+    var rect = tiltCard.getBoundingClientRect();
+    var x = (e.clientX - rect.left) / rect.width - 0.5;
+    var y = (e.clientY - rect.top) / rect.height - 0.5;
+    tiltCard.style.transform = "perspective(900px) rotateX(" + (-8 * y) + "deg) rotateY(" + (8 * x) + "deg)";
   });
-  tiltCard.addEventListener("mouseleave", () => {
+  tiltCard.addEventListener("mouseleave", function () {
     tiltCard.style.transform = "perspective(900px) rotateX(0) rotateY(0)";
   });
 }
 
 /* --- Form Submission --- */
-const lessonForm = document.getElementById("lessonForm");
-const submitButton = lessonForm.querySelector('button[type="submit"]');
+var lessonForm = document.getElementById("lessonForm");
+var submitButton = lessonForm.querySelector('button[type="submit"]');
 
-lessonForm.addEventListener("submit", async e => {
+lessonForm.addEventListener("submit", async function (e) {
   e.preventDefault();
-  const originalText = submitButton.textContent;
+  var originalText = submitButton.textContent;
   submitButton.disabled = true;
   submitButton.textContent =
     currentLanguage === "th" ? "กำลังส่ง..." : "Sending inquiry...";
 
-  const formData = Object.fromEntries(new FormData(lessonForm).entries());
+  var formData = Object.fromEntries(new FormData(lessonForm).entries());
   formData.websiteLanguage = currentLanguage;
 
   try {
