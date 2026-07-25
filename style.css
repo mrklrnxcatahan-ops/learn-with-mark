@@ -1264,12 +1264,18 @@ footer {
     gap: 10px;
   }
 
-  .contact-buttons a {
+  .contact-link {
     width: 100%;
-    text-align: center;
-    padding: 14px;
+    justify-content: center;
+    padding: 16px 20px;
     font-size: .95rem;
-    border-radius: 14px;
+    border-radius: 16px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 24px;
+    height: 24px;
   }
 
   /* --- FAQ (premium accordion) --- */
