@@ -945,7 +945,7 @@ footer {
   /* --- BRAND (phone) --- */
 .brand-icon {
     width: 350px;
-    height: 3500px;
+    height: 350px;
     transform: none;
     object-fit: contain;
   }
